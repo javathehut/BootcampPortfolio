@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angelique's Journal</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav>
+        <a href="#top"><img src="AngeliqueLogo.png" alt="logo"></a>
+        <form id="searchForm" action="">
+            <input type="submit" id="searchButton" value="Search Google"></input>
+            <input id="searchBar" type="text" name="search">
+        </form>
+        <script type="text/javascript">
+            document.getElementById('searchForm').onsubmit = function () {
+                window.open('http://www.google.com/search?q=' + document.getElementById('searchBar').value, '_blank');
+                //The below code would allow the user to search TAGS or whatever else within the site, if it were a real site.
+                // window.location = 'http://www.google.com/search?q=site:yoursitename.com ' + document.getElementById('searchBar').value;
+                return false;
+            }
+
+        </script>
+    </nav>
+
+    <header id="top">
+        <h1>Lovely Journal</h1>
+        <h2>Keep it cute.</h2>
+    </header>
+
+    <aside id="aside">
+        <form id="form" action="" method="POST">
+
+            <p>Date:</p>
+            <input id="date" type="date" name="date">
+            <br>
+            <p>Title:</p>
+            <input id="title" type="text" name="title" placeholder="Give it a title" size="50">
+            <br>
+            <p>Author:</p>
+            <input id="author" type="text" name="author" placeholder="Who are you?" size="50">
+            <br>
+            <p>Entry:</p>
+            <textarea id="entry" name="content" placeholder="Your masterful thoughts here."></textarea>
+            <br>
+            <p>Tags:</p>
+            <input id="tags" type="text" name="tags" placeholder="Separate tags by a comma" size="50">
+            <br><br>
+            <button id="submit" type="submit">Share</button>
+
+        </form>
+        <hr>
+        <form id="tagForm" action="" method="POST">
+            <p>Search by Tags:</p>
+            <input id="tagQuery" type="text" name="tagQuery" placeholder="One tag at a time, please." size="50">
+            <br><br>
+            <button id="tagSubmit" type="submit">Search</button>
+
+        </form>
+        <br><br>
+        <div>
+
+        </div>
+
+    </aside>
+
+    <main id="main">
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="journal.js"></script>
+</body>
+
+</html>
