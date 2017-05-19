@@ -1,0 +1,32 @@
+.headtext{
+    text-align: center;
+    color: black;
+}
+
+.pics img {
+      max-width: 100%;
+}
+
+.bottom-buffer img {
+    margin-bottom: 30px;
+}
+
+.describe {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    color: white;
+    bottom: 31px;
+    left: 15px;
+    border-radius: 5px;
+}
+
+.describe p{
+    padding-top: 5px;
+
+}
+
+.like {
+    position: absolute;
+    top: 8px;
+    opacity: 0.8;
+}
