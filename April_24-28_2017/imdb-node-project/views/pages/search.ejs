@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/styles.css">        
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="text-center">Search Results</h1>
+            <div>
+                
+            </div>
+            <%  for (i = 0; i < searchedMovies.length; i++){  %>
+            
+                <a class="movie-link" href= <%= `/movie/${searchedMovies[i].id}` %> > 
+                
+                <div class="media movie-list-item">
+                    <div class="media-left">
+                        <div class="poster-container">
+                        
+                            <img class="media-object movie-poster" src= <%= searchedMovies[i].poster %> />
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                            <%= searchedMovies[i].title %>
+                            <span class="badge">Rated: <%= searchedMovies[i].rated %></span>
+                        </h4>
+                        <div>
+                            Plot: <%= searchedMovies[i].plot %>
+                        </div>
+                        <div class="released-date">
+                            Released: <%= searchedMovies[i].released %>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            
+            <% } %>
+
+        </div>
+    </body>
+</html>
+

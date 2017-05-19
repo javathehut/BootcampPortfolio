@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/styles.css">        
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="text-center">Movie Database</h1>
+            <div>
+                <form action="/search" method="get">
+                   
+                        <div>
+                            <label for="titleSearch">Search by Title</label>
+                            <input type="text" name="titleSearch" class="form-control" placeholder="Enter movie title" >
+                        </div>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                   
+                </form>
+            </div>
+            <%  for (i = 0; i < movies.length; i++){  %>
+                <a class="movie-link" href= <%= `/movie/${movies[i].id}` /* "/movie/" + movies[i].id */%> > 
+                
+                <div class="media movie-list-item">
+                    <div class="media-left">
+                        <div class="poster-container">
+                        
+                            <img class="media-object movie-poster" src= <%= movies[i].poster %> />
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                            <%= movies[i].title %>
+                            <span class="badge">Rated: <%= movies[i].rated %></span>
+                        </h4>
+                        <div>
+                    
+                            Plot: <%= movies[i].plot %>
+                        </div>
+                        <div class="released-date">
+                    
+                            Released: <%= movies[i].released %>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            
+            <% } %>
+
+        </div>
+
+
+    </body>
+</html>
+
