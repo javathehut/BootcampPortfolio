@@ -1,0 +1,28 @@
+.done {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.imageStyle {
+  border:2px solid #DDD; 
+  width: 200px;
+  display:inline;
+  margin: auto;
+  }
+
+.listStyle {
+  list-style-type:none;
+  display: inline-block;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.margin {
+  margin:0;
+  padding: 0;
+}
+.pageTitle {
+  color: blue;
+}
