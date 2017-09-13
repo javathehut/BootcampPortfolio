@@ -1,4 +1,2 @@
 # Portfolio
-Projects worked on.
-
-Go to https://fruit-finder.herokuapp.com/ for a pair-programmed game I helped make.
+Projects worked on during bootcamp except for Fruit Finder and Pitch Maestro, which have their own repositories.
